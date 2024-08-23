@@ -258,7 +258,7 @@ body {
     font-weight: 600;
     padding: 0 40px;
     background-color: #252525;
-    color: #fff;
+    color: #fff !important;
     padding: 20px 40px;
 }
 
