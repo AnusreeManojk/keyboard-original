@@ -1,0 +1,299 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+   /* background: linear-gradient(135deg, #abbaab,#ffffff); */
+background: linear-gradient(135deg, #70868d,#ffffff);
+
+
+
+
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.keyboard {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 12px 10px;
+    box-shadow: 4px 4px 10px rgba(122, 119, 119, 0.5);
+    background-color: #f7f7f7
+
+}
+
+.keys {
+    width: max-content;
+    display: flex;
+    flex-flow: row;
+    border-radius: 10px;
+}
+
+.key {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: 2px solid #3333;
+    width: max-content;
+    height: max-content;
+    min-width: 45px;
+    /* min-height: 30px; */
+    font-family: sans-serif;
+    /* color: rgba(8, 157, 243, 0.5), */
+    border-radius: 8px;
+    margin: 3px;
+    box-shadow: 4px 4px 10px rgba(122, 119, 119, 0.5);
+    font-size: 20px;
+    font-weight: 550;
+    background-color: #fff;
+    
+
+}
+
+#changeField{
+    padding-left: 30px;
+}
+
+.long-keys {
+    width: max-content;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#shift {
+    padding-left: 105px;
+    min-width: 61px;
+
+}
+
+#shift1 {
+    padding-right: 105px;
+    min-width: 61px;
+
+}
+
+#enter {
+    padding-left: 53px;
+    min-width: 60px;
+
+}
+
+#space {
+    width: 350px;
+    box-sizing: border-box;
+}
+
+#caps {
+    padding-right: 52px;
+    min-width: 80px;
+
+}
+
+#tab {
+    padding-right: 38px;
+}
+
+#back {
+    padding-left: 70px;
+    padding-right: 8px;
+}
+
+.email-container {
+    margin-top: 30px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#small-key {
+    max-width: 50px !important;
+}
+
+.email-head {
+    width: 100%;
+    background-color: #f2f6fc;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.head-images {
+    display: flex;
+}
+
+.head-images img {
+    width: 20px;
+    height: 20px;
+}
+
+.email-head span {
+    padding: 20px;
+}
+
+.toInput {
+    background-color: #fffefe;
+    margin: 10px;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #bebaba;
+}
+
+.toInput input {
+    width: 100%;
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.toInput span {
+    font-family: sans-serif;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.Subject {
+    display: flex;
+    margin: 10px;
+    border-bottom: 1px solid #bebaba;
+    font-family: sans-serif;
+}
+
+.Subject input {
+    width: 100%;
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.email-text {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.email-text textarea {
+    outline: none;
+    border: none;
+    resize:none;
+}
+
+.mouseclick {
+    margin-top: 30px;
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10%;
+    background-color: #f2f6fc;
+    width: 200px;
+    margin-left: 50px;
+}
+
+.mouseclick button {
+    padding:40px 30px;
+    border-radius: 10px;
+    border: none;
+    border: 2px solid;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: hsl(219, 22%, 82%);
+    width: 200px;
+    background-color:  #b4bbbd;
+}
+
+.special-keyboard {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    border: 3px solid #fff;
+    box-shadow: 4px 4px 10px rgba(122, 119, 119, 0.5);
+}
+
+.Special-keys {
+    display: flex;
+    flex-flow: row;
+    border-radius: 50px;
+}
+
+
+.all-keyboards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#Send-key {
+    display: flex;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 0 40px;
+    background-color: #252525;
+    color: #fff;
+    padding: 20px 40px;
+
+}
+
+
+.instructions {
+    position: absolute;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+    top: 7%;
+    border: 1px solid;
+    padding: 20px;
+    width: 450px;
+}
+
+.instructions h2 {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.instructions ul{
+    padding: 10px;
+    margin: 0;
+}
+.instructions li {
+    margin: 5px 0;
+    font-family: sans-serif;
+     font-weight: 500;
+     font-size: 18px;
+     margin: 10px 0;
+}
+
