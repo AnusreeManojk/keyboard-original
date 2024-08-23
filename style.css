@@ -9,12 +9,8 @@ body {
     width: 100vw;
     height: 100vh;
     flex-direction: column;
-   /* background: linear-gradient(135deg, #abbaab,#ffffff); */
-background: linear-gradient(135deg, #70868d,#ffffff);
-
-
-
-
+    /* background: linear-gradient(135deg, #abbaab,#ffffff); */
+    background: linear-gradient(135deg, #70868d, #ffffff);
     backdrop-filter: blur(10px);
     overflow: hidden;
     align-items: center;
@@ -34,7 +30,6 @@ background: linear-gradient(135deg, #70868d,#ffffff);
     padding: 12px 10px;
     box-shadow: 4px 4px 10px rgba(122, 119, 119, 0.5);
     background-color: #f7f7f7
-
 }
 
 .keys {
@@ -63,11 +58,11 @@ background: linear-gradient(135deg, #70868d,#ffffff);
     font-size: 20px;
     font-weight: 550;
     background-color: #fff;
-    
+
 
 }
 
-#changeField{
+#changeField {
     padding-left: 30px;
 }
 
@@ -206,7 +201,7 @@ background: linear-gradient(135deg, #70868d,#ffffff);
 .email-text textarea {
     outline: none;
     border: none;
-    resize:none;
+    resize: none;
 }
 
 .mouseclick {
@@ -223,7 +218,7 @@ background: linear-gradient(135deg, #70868d,#ffffff);
 }
 
 .mouseclick button {
-    padding:40px 30px;
+    padding: 40px 30px;
     border-radius: 10px;
     border: none;
     border: 2px solid;
@@ -231,7 +226,7 @@ background: linear-gradient(135deg, #70868d,#ffffff);
     font-weight: 600;
     background-color: hsl(219, 22%, 82%);
     width: 200px;
-    background-color:  #b4bbbd;
+    background-color: #b4bbbd;
 }
 
 .special-keyboard {
@@ -265,7 +260,6 @@ background: linear-gradient(135deg, #70868d,#ffffff);
     background-color: #252525;
     color: #fff;
     padding: 20px 40px;
-
 }
 
 
@@ -283,17 +277,44 @@ background: linear-gradient(135deg, #70868d,#ffffff);
 .instructions h2 {
     font-family: sans-serif;
     margin: 0;
+    font-size: 24px;
+    text-decoration: underline;
 }
 
-.instructions ul{
+.instructions ol {
     padding: 10px;
     margin: 0;
 }
+
 .instructions li {
     margin: 5px 0;
     font-family: sans-serif;
-     font-weight: 500;
-     font-size: 18px;
-     margin: 10px 0;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0;
 }
 
+.instructions span {
+    font-size: bold;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.credits {
+    position: absolute;
+    right: 5%;
+    bottom: 7%;
+}
+
+.credits ol {
+    margin: 0;
+    /* padding: 0; */
+}
+
+.credits a {
+    color: #000;
+}
+
+.credits a:hover {
+    color: blue;
+}
