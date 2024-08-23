@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let keys = document.querySelectorAll('.key'); 
     const mouseClick = document.querySelector('.click');
     const inputs = document.querySelectorAll('.to-input, .subject, .textarea');
     const rows = document.querySelectorAll('.keys');
-
+    let allKeys = Array.from(document.querySelectorAll('.key'));
+    let currentKeys = allKeys; 
     let lastIndex = 0;
     let intervalId = null;
     let isCapsLockOn = false;
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let pressTimeout;
     let currentInputIndex = 0;
     let currentRow = 0;
-
+   
     function displayKeys(key) {
         const currentFocus = inputs[currentInputIndex];
 
@@ -56,20 +56,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         intervalId = setInterval(() => {
-            if (keys.length > 0) {
+            if (currentKeys.length > 0) {
                 if (lastIndex > 0) {
-                    keys[lastIndex - 1].style.backgroundColor = '';
-                    keys[lastIndex - 1].style.color = 'black';
-                } else if (lastIndex === 0 && keys.length > 0) {
-                    keys[keys.length - 1].style.backgroundColor = '';
+                    currentKeys[lastIndex - 1].style.backgroundColor = '';
+                    currentKeys[lastIndex - 1].style.color = 'black';
+                } else if (lastIndex === 0 && currentKeys.length > 0) {
+                    currentKeys[currentKeys.length - 1].style.backgroundColor = '';
                 }
-                keys[lastIndex].style.backgroundColor = '#86969b';
-                keys[lastIndex].style.color = '';
 
-                currentKeyContent = keys[lastIndex].textContent;
+                currentKeys[lastIndex].style.backgroundColor = '#86969b';
+                currentKeys[lastIndex].style.color = '';
+
+                currentKeyContent = currentKeys[lastIndex].textContent;
 
                 lastIndex++;
-                if (lastIndex >= keys.length) {
+                if (lastIndex >= currentKeys.length) {
                     lastIndex = 0;
                 }
             }
@@ -105,13 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mouseClick.addEventListener('mousedown', () => {
         pressTimeout = setTimeout(() => {
-            keys.forEach(key => {
+            allKeys.forEach(key => {
                 key.style.backgroundColor = '';
                 key.style.color = 'black';
             });
 
             currentRow = (currentRow + 1) % rows.length;
-            keys = rows[currentRow].querySelectorAll('.key'); 
+            currentKeys = Array.from(rows[currentRow].querySelectorAll('.key')); 
+
+            lastIndex = 0;
 
             if (isIterating) {
                 clearInterval(intervalId);
