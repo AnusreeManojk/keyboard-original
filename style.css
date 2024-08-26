@@ -2,6 +2,7 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
     align-items: center;
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .keyboard {
@@ -27,20 +29,20 @@ body {
     width: fit-content;
     height: fit-content;
     border-radius: 10px;
-    padding: 12px 10px;
+    padding: 8px 8px;
     box-shadow: 4px 4px 10px rgba(122, 119, 119, 0.5);
     background-color: #f7f7f7
 }
 
 .keys {
-    width: max-content;
+    /* width: max-content; */
     display: flex;
     flex-flow: row;
     border-radius: 10px;
+
 }
 
 .key {
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,22 +50,22 @@ body {
     border: 2px solid #3333;
     width: max-content;
     height: max-content;
-    min-width: 45px;
-    /* min-height: 30px; */
+    /* max-width: 45px; */
     font-family: sans-serif;
     /* color: rgba(8, 157, 243, 0.5), */
     border-radius: 8px;
-    margin: 3px;
+    margin: 2px;
     box-shadow: 4px 4px 10px rgba(122, 119, 119, 0.5);
     font-size: 20px;
     font-weight: 550;
     background-color: #fff;
-
-
+    padding: 15px 30px;
+    font-size: 20px;
 }
 
 #changeField {
     padding-left: 30px;
+    padding-right: 25px;
 }
 
 .long-keys {
@@ -88,29 +90,34 @@ body {
 }
 
 #enter {
-    padding-left: 53px;
+    padding-left: 40px;
     min-width: 60px;
 
 }
 
 #space {
-    width: 350px;
+    width: 300px;
     box-sizing: border-box;
 }
 
 #caps {
-    padding-right: 52px;
+    padding-right: 40px;
     min-width: 80px;
-
+    padding-left: 20px;
 }
 
 #tab {
     padding-right: 38px;
+    padding-left: 22px;
 }
 
 #back {
     padding-left: 70px;
     padding-right: 8px;
+}
+
+.mail {
+    margin-left: 40px;
 }
 
 .email-container {
@@ -119,6 +126,15 @@ body {
     margin-bottom: 20px;
     background-color: #fff;
     border-radius: 10px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-width: 600px;
+    flex-direction: column;
+}
+
+.email-container .textarea {
+    width: max-content
 }
 
 #small-key {
@@ -256,22 +272,31 @@ body {
     display: flex;
     font-family: sans-serif;
     font-weight: 600;
-    padding: 0 40px;
+    padding: 0 0px;
     background-color: #252525;
     color: #fff !important;
-    padding: 20px 40px;
+    padding: 15px 30px;
 }
 
+.top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px 20px 0;
+    margin-right: 20px;
+    /* overflow: hidden; */
+}
 
 .instructions {
-    position: absolute;
-    left: 3%;
+    /* left: 3%; */
     display: flex;
     flex-direction: column;
-    top: 7%;
+    /* top: 7%; */
     border: 1px solid;
     padding: 20px;
     width: 450px;
+    margin-left: 30PX;
+    height: fit-content;
 }
 
 .instructions h2 {
@@ -318,3 +343,204 @@ body {
 .credits a:hover {
     color: blue;
 }
+
+@media screen and (max-width:1180px) {
+
+    .container {
+        align-items: flex-start;
+    }
+
+    .mail {
+        margin-left: 18px;
+        width: 98%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .email-container {
+        margin: auto;
+        width: max-content;
+    }
+
+    .instructions {
+        display: none;
+
+    }
+
+    .instruction-small {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 55px;
+        border: 1px solid;
+        left: 10px;
+        width: 35%;
+
+    }
+
+    .instruction-small h2 {
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    .instruction-small ol {
+        overflow: hidden;
+        gap: 30px;
+    }
+
+    .instructions-small ol li {
+        width: max-content;
+        font-size: 16px;
+    }
+
+    .instruction-small ol span {
+        width: max-content !important;
+        font-size: 18px;
+    }
+
+    .top {
+        display: flex;
+    }
+
+    .key {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    #changeField {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .long-keys {
+        width: max-content;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #shift {
+        padding-left: 105px;
+        min-width: 61px;
+
+    }
+
+    #shift1 {
+        padding-right: 105px;
+        min-width: 61px;
+
+    }
+
+    #enter {
+        padding-left: 23px;
+        /* min-width: 60px; */
+    }
+
+    #space {
+        width: 230px;
+        box-sizing: border-box;
+    }
+
+    #caps {
+        padding-right: 28px;
+        min-width: 80px;
+        padding-left: 20px;
+    }
+
+    #tab {
+        padding-right: 43px;
+        padding-left: 22px;
+    }
+
+    #back {
+        padding-left: 53px;
+        padding-right: 8px;
+    }
+
+    #Send-key {
+        background-color: #252525;
+        color: #fff !important;
+        padding: 10px 30px;
+    }
+
+    .all-keyboards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .keyboard {
+        align-items: center;
+    }
+
+    .mouse {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .keys {
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        max-width: 855.8px;
+        justify-content: space-between;
+    }
+
+    .keyboard {
+        /* width: 500px; */
+    }
+
+    .key {
+        margin: 0;
+    }
+}
+
+@media screen and(max-width:884px) {
+    .keys {
+        display: flex;
+        /* flex-wrap: wrap; */
+    }
+    
+
+    #enter {
+        padding-left: 23px;
+        /* min-width: 60px; */
+    }
+
+    #space {
+        width: 200px;
+        box-sizing: border-box;
+    }
+
+    #caps {
+        padding-right: 28px;
+        min-width: 80px;
+        padding-left: 20px;
+    }
+
+    #tab {
+        padding-right: 35px;
+        padding-left: 22px;
+    }
+
+    #back {
+        padding-left:0 px;
+        padding-right: 8px;
+    }
+
+    #Send-key {
+        background-color: #252525;
+        color: #fff !important;
+        padding: 10px 20px;
+    }
+}
+
