@@ -344,6 +344,21 @@ body {
     color: blue;
 }
 
+.instruction-small {
+    display: none;
+}
+
+.mouseclick {
+    width: 130px;
+    margin-left: 50px;
+}
+
+.mouseclick button {
+  
+    width: 130px;
+    background-color: #b4bbbd;
+}
+
 @media screen and (max-width:1180px) {
 
     .container {
@@ -502,18 +517,28 @@ body {
     .key {
         margin: 0;
     }
+    .email-container {
+        min-width: 500px;
+
+    }
+    .instruction-small h2 {
+        font-family: sans-serif;
+
+    }
 }
 
-@media screen and(max-width:884px) {
+@media screen and (max-width:860px) {
     .keys {
         display: flex;
         /* flex-wrap: wrap; */
+        /* background-color: #087799; */
     }
-    
+
 
     #enter {
-        padding-left: 23px;
+        padding-left: 5px;
         /* min-width: 60px; */
+        padding-right: 5px;
     }
 
     #space {
@@ -522,25 +547,76 @@ body {
     }
 
     #caps {
-        padding-right: 28px;
-        min-width: 80px;
-        padding-left: 20px;
+        padding-right: 8px;
+        /* min-width: 80px; */
+        padding-left: 0px;
     }
 
     #tab {
-        padding-right: 35px;
-        padding-left: 22px;
+        padding-right: 9px;
+        padding-left: 12px;
     }
 
     #back {
-        padding-left:0 px;
+        padding-left: 10px !important;
         padding-right: 8px;
     }
 
     #Send-key {
         background-color: #252525;
         color: #fff !important;
-        padding: 10px 20px;
+        padding: 6px 15px;
+    }
+
+    .key {
+        font-size: 14px;
+        /* padding: 5; */
+        padding: 7px 15px;
+    }
+
+    .keys {
+        max-width: 650px;
+    }
+
+    #changeField {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: max-content;
+    }
+
+    .mail {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .top {
+        box-sizing: border-box;
+    }
+
+    .keyboard {
+        padding: 5px;
+    }
+
+    .instruction-small ol {
+        padding-left: 24px;
+    }
+
+    .instruction-small ol li {
+        font-size: 15px;
+        padding: 3px 0;
+    }
+
+    .instruction-small ol li span {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .instruction-small h2 {
+        font-family: sans-serif;
+
+    }
+    .email-container {
+        min-width: 500px;
+
     }
 }
-
